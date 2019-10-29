@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="5dp"
+            android:id="@+id/rel1">
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_marginLeft="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Keyword" />
+
+            <EditText
+                android:id="@+id/keyword"
+                android:layout_width="350dp"
+                android:layout_marginLeft="10dp"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:hint="Enter Keyword"
+                android:layout_below="@+id/textView2"/>
+            <TextView
+                android:id="@+id/keyword_error"
+                android:layout_marginLeft="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/keyword"
+                android:text="Please enter mandatory field"
+                android:textColor="#ff0000"/>
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="Category"
+                android:layout_below="@+id/keyword_error"
+                android:layout_marginTop="5dp"/>
+
+            <Spinner
+                android:id="@+id/category"
+                android:layout_width="350dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="5dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textView3"/>
+
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="Condition"
+                android:layout_below="@+id/category"
+                android:layout_marginTop="10dp"/>
+
+            <LinearLayout
+                android:id="@+id/lin1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_below="@+id/textView4">
+                <CheckBox
+                    android:id="@+id/checkbox_new"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:text="New" />
+                <CheckBox
+                    android:id="@+id/checkbox_used"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Used"
+                    android:layout_marginLeft="10dp" />
+                <CheckBox
+                    android:id="@+id/checkbox_unspecified"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Unspecified"
+                    android:layout_marginLeft="10dp" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/textView5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="Shipping Options"
+                android:layout_below="@+id/lin1"
+                android:layout_marginTop="5dp"/>
+
+            <LinearLayout
+                android:id="@+id/lin2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_below="@+id/textView5">
+                <CheckBox
+                    android:id="@+id/checkbox_local"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:text="Local Pickup" />
+                <CheckBox
+                    android:id="@+id/checkbox_free"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Free Shipping"
+                    android:layout_marginLeft="20dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/lin3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_below="@+id/lin2">
+                <TextView
+                    android:id="@+id/textView6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:text="Enable Nearby Search"
+                    android:layout_marginTop="5dp"/>
+                <CheckBox
+                    android:id="@+id/checkbox_enable"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="5dp"/>
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:id="@+id/rel2"
+                android:layout_below="@+id/lin3">
+                <EditText
+                    android:id="@+id/miles"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:hint="Miles from"
+                    android:width="350dp" />
+                <TextView
+                    android:id="@+id/textView7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:text="From"
+                    android:layout_below="@+id/miles"
+                    android:layout_marginTop="10dp"/>
+
+                <RadioGroup
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/rg1"
+                    android:layout_marginLeft="20dp"
+                    android:layout_below="@+id/textView7">
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Current Location"
+                        android:id="@+id/current"
+                        android:checked="true"
+                        android:onClick="enableZipcode"/>
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:id="@+id/zipcode"
+                        android:onClick="enableZipcode"/>
+                </RadioGroup>
+                <EditText
+                    android:id="@+id/zipcode_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:hint="zipcode"
+                    android:width="200dp"
+                    android:layout_marginLeft="50dp"
+                    android:layout_marginTop="100dp"/>
+                <TextView
+                    android:id="@+id/zipcode_error"
+                    android:layout_marginLeft="25dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/zipcode_text"
+                    android:text="Please enter mandatory field"
+                    android:textColor="#ff0000"/>
+
+            </RelativeLayout>
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rel2"
+                android:id="@+id/search"
+                android:layout_marginLeft="40dp"
+                android:layout_marginTop="5dp"
+                android:text="Search"
+                android:backgroundTint="#FF4500"
+                android:textColor="@android:color/white"
+                android:width="150dp"/>
+            <Button
+                android:layout_width="wrap_content"
+                android:id="@+id/clear"
+                android:layout_marginTop="5dp"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/search"
+                android:layout_below="@+id/rel2"
+                android:layout_marginLeft="20dp"
+                android:text="Clear"
+                android:backgroundTint="#FF4500"
+                android:textColor="@android:color/white"
+                android:width="150dp"/>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</android.support.constraint.ConstraintLayout>

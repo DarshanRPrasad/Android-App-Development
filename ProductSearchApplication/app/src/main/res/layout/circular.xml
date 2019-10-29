@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.wssholmes.stark.circular_score.CircularScoreView android:id="@+id/two"
+    android:layout_width="30dp"
+    android:layout_height="30dp"
+    app:score="50"
+    app:setPrimaryColor="#f00"
+    app:setSecondaryColor="#0f0"
+    app:setBackgroundColor="#fff"
+    app:setTextColor="#000"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" />
